@@ -1,0 +1,73 @@
+body {
+    background-color: black;
+}
+
+
+.heading {
+    width: 20.4%;
+    height: 50px;
+    border: 4px solid rgb(247, 0, 255);
+    border-radius: 20px;
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translate(-50%, 0);
+}
+
+.headingstyle {
+    color: rgb(247, 0, 255);
+    font-size: 25;
+    text-align: center;
+    margin-top: 10;
+    font-weight: lighter;
+}
+
+.navs {
+    width: 98.8%;
+    height: 40px;
+    border: 4px solid rgb(247, 0, 255);
+    border-radius: 20px;
+    position: absolute; 
+    margin-top: 60px;
+
+}
+
+.pagetitle {
+    color: rgb(247, 0, 255);
+    margin-top: 2;
+    font-size: 30;
+    margin-left: 10;
+
+}
+
+.lists {
+    color: rgb(247, 0, 255);
+    margin-top: 2px;
+    font-size: 30px;
+    margin-left: 10px; 
+    width: 98.8%;
+    height: 40px;
+    list-style: none; 
+    display: flex; 
+    gap: 30px;
+    margin-top: -56px;
+    margin-left: 150px;
+}
+
+.listsdata {
+    text-decoration: none;
+    color: rgb(247, 0, 255);
+    font-size: 20;
+}
+
+.weclome {
+
+}
+
+.description {
+
+}
+
+.clip {
+
+}

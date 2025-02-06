@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submit Game - Game Hub</title>
+  <title>Submit Game - Game Vault</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <div class="heading">
-    <h1 class="headingstyle">Game Hub</h1>
+    <h1 class="headingstyle">Game Vault</h1>
   </div>
 
   <div class="navs">
@@ -27,46 +26,23 @@
     </video>
     <div class="subm1">
       <form id="gameForm" class="form">
-        <label for="gameThumbnail">Game Thumbnail URL:</label><br>
-        <input type="text" id="gameThumbnail" name="gameThumbnail" placeholder="Paste game thumbnail URL" required><br>
+        <label for="gameThumbnail" class="submti">Game Thumbnail URL:</label><br>
+        <input type="text" id="gameThumbnail" name="gameThumbnail" placeholder="Paste game thumbnail URL" required class="boxes"><br>
 
-        <label for="gameName">Game Name:</label><br>
-        <input type="text" id="gameName" name="gameName" placeholder="Enter game name" required><br>
+        <label for="gameName" class="submti">Game Name:</label><br>
+        <input type="text" id="gameName" name="gameName" placeholder="Enter game name" required class="boxes"><br>
 
-        <label for="gameDescription">Game Description:</label><br>
-        <textarea id="gameDescription" name="gameDescription" rows="4" placeholder="Describe the game"></textarea><br>
+        <label for="gameDescription" class="submti">Game Description:</label><br>
+        <textarea id="gameDescription" name="gameDescription" rows="4" placeholder="Describe the game" class="boxes"></textarea><br>
 
-        <label for="gamePrice">Game Price (in USD):</label><br>
-        <input type="number" id="gamePrice" name="gamePrice" placeholder="Enter game price" required><br>
+        <label for="gamePrice" class="submti">Game Price (in USD):</label><br>
+        <input type="number" id="gamePrice" name="gamePrice" placeholder="Enter game price" required class="boxes"><br><br>
 
-        <button type="submit">Submit Game</button>
+        <button type="submit" class="button">Submit Game</button>
       </form>
     </div>
   </section>
 
-  <script>
-    document.getElementById('gameForm').addEventListener('submit', function (event) {
-      event.preventDefault();
 
-      const gameThumbnail = document.getElementById('gameThumbnail').value;
-      const gameName = document.getElementById('gameName').value;
-      const gameDescription = document.getElementById('gameDescription').value;
-      const gamePrice = document.getElementById('gamePrice').value;
-
-      const gameData = {
-        gameThumbnail,
-        gameName,
-        gameDescription,
-        gamePrice,
-      };
-
-      let gameList = JSON.parse(localStorage.getItem('gameList')) || [];
-      gameList.push(gameData);
-      localStorage.setItem('gameList', JSON.stringify(gameList));
-
-      alert('Game submitted successfully!');
-      this.reset();
-    });
-  </script>
 </body>
 </html>

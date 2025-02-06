@@ -22,27 +22,35 @@ if (gameForm) {
     gameForm.reset();
   });
 }
-    const loadGames = () => {
-      const gameCardSection = document.getElementById('gameCardSection');
-      const gameList = JSON.parse(localStorage.getItem('gameList')) || [];
-  
-      if (gameList.length === 0) {
+const loadGames = () => {
+    const gameCardSection = document.getElementById('gameCardSection');
+    const gameList = JSON.parse(localStorage.getItem('gameList')) || [];
+
+    if (gameList.length === 0) {
         gameCardSection.innerHTML = '<p>No games added yet.</p>';
         return;
-      }
-  
-      gameCardSection.innerHTML = gameList.map(game => `
+    }
+
+    gameCardSection.innerHTML = gameList.map((game, index) => `
         <div class="game-container">
-          <img src="${game.gameThumbnail}" alt="Game Thumbnail" class="game-thumbnail" />
-          <div class="game-info">
-            <h3>${game.gameName}</h3>
-            <p>${game.gameDescription}</p>
-            <p class="game-price">Price: Ksh ${game.gamePrice}</p>
-          </div>
+            <button class="delete-btn" onclick="deleteGame(${index})">X</button>
+            <img src="${game.gameThumbnail}" alt="Game Thumbnail" class="game-thumbnail" />
+            <div class="game-info">
+                <h3>${game.gameName}</h3>
+                <p>${game.gameDescription}</p>
+                <p class="game-price">Price: Ksh ${game.gamePrice}</p>
+            </div>
         </div>
-      `).join('');
-    };
-  
+    `).join('');
+};
+
+const deleteGame = (index) => {
+    let gameList = JSON.parse(localStorage.getItem('gameList')) || [];
+    gameList.splice(index, 1);
+    localStorage.setItem('gameList', JSON.stringify(gameList));
     loadGames();
+};
+
+loadGames();
 
   

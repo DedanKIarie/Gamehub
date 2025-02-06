@@ -1,5 +1,11 @@
 body {
-    background-color: black;
+    background-color: rgb(10, 0, 17);
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -9,49 +15,47 @@ body {
     border: 4px solid rgb(247, 0, 255);
     border-radius: 20px;
     position: absolute; 
-    top: 0; 
+    top: 10px; 
     left: 50%; 
     transform: translate(-50%, 0);
 }
 
 .headingstyle {
     color: rgb(247, 0, 255);
-    font-size: 25;
+    font-size: 25px;
     text-align: center;
-    margin-top: 10;
+    margin-top: 10px;
     font-weight: lighter;
 }
 
 .navs {
     width: 98.8%;
-    height: 40px;
+    height: 50px;
     border: 4px solid rgb(247, 0, 255);
     border-radius: 20px;
     position: absolute; 
-    margin-top: 60px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 
 }
 
 .pagetitle {
     color: rgb(247, 0, 255);
-    margin-top: 2;
-    font-size: 30;
-    margin-left: 10;
+    font-size: 30px;
+    margin: 0;
 
 }
 
 .lists {
-    color: rgb(247, 0, 255);
-    margin-top: 2px;
-    font-size: 30px;
-    margin-left: 10px; 
-    width: 98.8%;
-    height: 40px;
     list-style: none; 
     display: flex; 
     gap: 30px;
-    margin-top: -56px;
-    margin-left: 150px;
+    margin: 0;
+    padding: 0;
+
 }
 
 .listsdata {
@@ -60,14 +64,108 @@ body {
     font-size: 20;
 }
 
-.weclome {
+.sectwel {
+    width: 80%;
+    max-width: 900px;
+    height: 400px;
+    border: 4px solid rgb(247, 0, 255);
+    border-radius: 20px;
+    margin-top: 200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.welcome {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
 }
 
 .description {
-
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    color: rgb(247, 0, 255);
+    font-size: 32px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
-.clip {
 
+.subm1 {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    color: rgb(247, 0, 255);
+    font-size: 32px;
+    font-weight: bold;
+   
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 200px;
 }
+
+
+
+.form {
+    width: 509px;
+    height: 300px;
+    border: 2px solid rgb(71, 0, 62);
+    border-radius: 20px;
+    margin-top:-79px ;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.game-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    margin-top: 100px;
+}
+  
+.game-container {
+     background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(247, 0, 255);
+    border-radius: 10px;
+    width: 300px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+  
+.game-thumbnail {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 8px; 
+}
+  
+.game-info {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+  
+.game-price {
+    color: rgb(247, 0, 255);
+    font-weight: bold;
+}
+
+
+
